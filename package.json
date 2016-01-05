@@ -1,6 +1,6 @@
 {
   "name": "kuzzle-plugin-helloworld",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sample Kuzzle Plugin Controller",
   "main": "./lib/index.js",
   "repository": {
@@ -20,6 +20,7 @@
   },
   "pluginInfo": {
     "defaultConfig": {
+      "loadedBy": "server"
     }
   },
   "license": "Apache-2.0",

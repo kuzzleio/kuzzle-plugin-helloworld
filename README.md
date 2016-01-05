@@ -12,7 +12,7 @@ This plugin doesn't need any right.
 
 # Configuration
 
-no configuration is needed for this plugin.
+This plugin is configured to be loaded only by a Kuzzle server instance.
 
 # How to create a plugin
 
