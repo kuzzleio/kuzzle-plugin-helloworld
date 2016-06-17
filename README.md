@@ -1,5 +1,11 @@
 ![logo](https://raw.githubusercontent.com/kuzzleio/kuzzle/master/docs/images/logo.png)
 
+# Kuzzle compatibility
+
+Versions 1.x of this plugin are compatible with Kuzzle v1.0.0-RC.4 and upper.
+
+For older versions of Kuzzle, install v0.x versions of this plugin instead.
+
 # Sample Plugin Controller
 
 This plugin is a simple plugin controller that implements a route for a "hello world" action.
