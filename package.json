@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Sample Kuzzle Plugin Controller",
   "main": "./lib/index.js",
+  "scripts": {
+    "lint": "eslint -c ./.eslintrc.json lib"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kuzzleio/kuzzle-plugin-helloworld.git"
@@ -25,15 +28,10 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "bluebird": "^3.4.6"
   },
   "devDependencies": {
-    "eslint": "1.9.0",
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.3",
-    "gruntify-eslint": "^1.2.0",
-    "mocha": "2.3.3",
-    "should": "7.1.1",
-    "rewire": "2.4.0"
+    "eslint": "1.9.0"
   },
   "gitHead": "",
   "homepage": "https://github.com/kuzzleio/kuzzle-plugin-helloworld#readme",
