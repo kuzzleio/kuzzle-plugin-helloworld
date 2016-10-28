@@ -1,4 +1,3 @@
-![logo](https://raw.githubusercontent.com/kuzzleio/kuzzle/master/docs/images/logo.png)
 
 # Kuzzle compatibility
 
