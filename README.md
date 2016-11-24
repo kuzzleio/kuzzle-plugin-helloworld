@@ -1,7 +1,7 @@
 
 # Kuzzle compatibility
 
-Versions 1.x of this plugin are compatible with Kuzzle v1.0.0-RC.4 and upper.
+Versions 2.x of this plugin are compatible with Kuzzle v1.0.0-RC.8 and upper.
 
 For older versions of Kuzzle, install v0.x versions of this plugin instead.
 
