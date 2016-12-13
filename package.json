@@ -1,7 +1,7 @@
 {
   "name": "kuzzle-plugin-helloworld",
-  "version": "1.0.0",
-  "description": "Sample Kuzzle Plugin Controller",
+  "version": "2.0.0",
+  "description": "Sample Kuzzle Controller Plugin",
   "main": "./lib/index.js",
   "scripts": {
     "lint": "eslint -c ./.eslintrc.json lib"
@@ -15,15 +15,12 @@
     "plugin",
     "controller"
   ],
-  "author": {
-    "name": "Kuzzle Team"
-  },
+  "author": "The Kuzzle Team <support@kuzzle.io>",
   "bugs": {
     "url": "https://github.com/kuzzleio/kuzzle-plugin-helloworld/issues"
   },
   "pluginInfo": {
     "defaultConfig": {
-      "loadedBy": "server"
     }
   },
   "license": "Apache-2.0",
@@ -31,17 +28,11 @@
     "bluebird": "^3.4.6"
   },
   "devDependencies": {
-    "eslint": "1.9.0"
+    "eslint": "3.11.1"
   },
-  "gitHead": "",
-  "homepage": "https://github.com/kuzzleio/kuzzle-plugin-helloworld#readme",
-  "_id": "kuzzle-plugin-helloworld@0.0.1",
-  "_from": "kuzzle-plugin-helloworld@0.0.1",
-  "_npmVersion": "2.14.7",
-  "_nodeVersion": "4.2.2",
-  "_npmUser": {
-    "name": "kuzzle",
-    "email": "support@kuzzle.io"
+  "engines": {
+    "node": ">= 4.4.5",
+    "npm": ">= 2.14.4"
   },
   "maintainers": [
     {

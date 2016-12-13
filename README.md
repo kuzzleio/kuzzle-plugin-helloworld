@@ -1,31 +1,55 @@
+# Sample Controller Plugin
 
-# Kuzzle compatibility
+This plugin is a simple plugin controller extending Kuzzle API with a "hello world" method.
 
-Versions 1.x of this plugin are compatible with Kuzzle v1.0.0-RC.4 and upper.
+# Installation
 
-For older versions of Kuzzle, install v0.x versions of this plugin instead.
+```
+bin/kuzzle plugins --install --packageVersion 2.0.0
+pm2 restart KuzzleServer
+```
 
-# Sample Plugin Controller
+# How to use
 
-This plugin is a simple plugin controller that implements a route for a "hello world" action.
+Simply access the new API route, either with HTTP:
 
+```
+$ curl -XGET 'http://<kuzzle server>:7511/_plugin/kuzzle-plugin-helloworld/hello/foo?pretty=true'
+{
+  "status": 200,
+  "error": null,
+  "requestId": "e1da45c7-56a9-4738-8c96-85ea77499c32",
+  "controller": "kuzzle-plugin-helloworld/hello",
+  "action": "sayHello",
+  "collection": null,
+  "index": null,
+  "metadata": null,
+  "result": "Hello foo"
+}
+```
 
+Or with any other protocol, using this JSON object:
 
-# Manifest
+```
+{
+  "controller": "kuzzle-plugin-helloworld/hello",
+  "action": "sayHello",
+  "name": "foo"
+}
+```
 
-This plugin doesn't need any right.
+For instance with WebSocket:
 
-# Configuration
-
-This plugin is configured to be loaded only by a Kuzzle server instance.
+```
+$ sudo apt install node-ws
+$ wscat -c 'http://<kuzzle server>:7513'
+connected (press CTRL+C to quit)
+> {"controller":"kuzzle-plugin-helloworld/hello","action":"sayHello","name":"foo"}
+< {"status":200,"error":null,"requestId":"07dacfe6-56ac-495d-9184-4e98e85a8c22","controller":"kuzzle-plugin-helloworld/hello","action":"sayHello","collection":null,"index":null,"metadata":null,"result":"Hello foo","room":"07dacfe6-56ac-495d-9184-4e98e85a8c22"}
+```
 
 # How to create a plugin
 
-See [Kuzzle documentation](https://github.com/kuzzleio/kuzzle/docs/plugins.md) about plugin for more information about how to create your own plugin.
+See [Kuzzle documentation](http://kuzzle.io/guide/#plugins) for more informations about plugins in general.
 
-# About Kuzzle
-
-For UI and linked objects developers, [Kuzzle](https://github.com/kuzzleio/kuzzle) is an open-source solution that handles all the data management
-(CRUD, real-time storage, search, high-level features, etc).
-
-[Kuzzle](https://github.com/kuzzleio/kuzzle) features are accessible through a secured API. It can be used through a large choice of protocols such as REST, Websocket or Message Queuing protocols.
+To learn more on how to extend Kuzzle API using controller plugins, you can also check the [controller plugins](http://kuzzle.io/guide/#gt-controllers) section.
